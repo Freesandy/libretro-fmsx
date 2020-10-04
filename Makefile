@@ -1,8 +1,5 @@
-include ./EMULib/Rules.gcc
-
-CFLAGS += -I$(EMULIB)/Unix -I/usr/X11R6/include
-DEFINES+= -DUNIX -DMITSHM -DBPS16
-OBJECTS+= $(EMUUNIX)
+BASEDIR	= ../..
+EMULIB	= $(BASEDIR)/EMULib
 
 TARGET_NAME := fmsx
 GIT_VERSION := " $(shell git rev-parse --short HEAD || echo unknown)"
